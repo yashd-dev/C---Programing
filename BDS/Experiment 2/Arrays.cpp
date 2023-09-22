@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void addingarraysend()
+void addingarraysend() // Adding an element to the end of an array
 {
     // make and int array take number of inputs from user and store them in the array
     int n;
@@ -19,7 +19,7 @@ void addingarraysend()
         cout << arr[i];
 }
 
-void addinganywhere()
+void addinganywhere() // Adding an element at any index in an array
 {
     // make and int array take number of inputs from user and store them in the array
     int n;
@@ -89,7 +89,7 @@ void deletearray()
     cout << endl;
 }
 
-void deletepos()
+void deletepos() // Deleting an element from any index in an array
 {
     int arr[10], tot = 10, i, elem, j;
     cout << "Enter 10 Array Elements: ";
@@ -111,7 +111,7 @@ void deletepos()
 }
 // [1,5,5,5]
 
-void deleteend()
+void deleteend() // Deleting an element from the end of an array
 {
     // deletion from the end of array
     // make and int array take number of inputs from user and store them in the array
@@ -133,35 +133,7 @@ int main()
     addingarraysend();
     addinganywhere();
     deletearray();
+    deletepos();
     deleteend();
     return 0;
 }
-
-// void darray()
-// {
-//     // 2d arrays
-//     cout << "Enter rows and colums";
-//     int r, c;
-//     int arr[r][c];
-//     cin >> r >> c;
-//     for (int i = 0; i < r; i++)
-//     {
-//         for (int j = 0; j < c; j++)
-//         {
-//             cout << "Row " << i << " Column " << j << ": ";
-//             cin >> arr[i][j];
-//         }
-//         cout << endl;
-//     }
-
-//     for (int i = 0; i < r; i++)
-//     {
-//         for (int j = 0; j < c; j++)
-//         {
-//             cout << arr[i][j] << " ";
-//         }
-//         cout << endl;
-//     }
-
-//     return;
-// }
