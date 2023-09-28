@@ -7,28 +7,40 @@ int main()
     cout << "Enter date in dd mm yyyy format: ";
     cin >> d >> m >> y;
     int days = 0;
-    for (int i = 1; i < m; i++)
+    // I am assuming every month starts with monday
+    for (int i = 0; i < d; i++)
     {
-        if (i == 2)
+        days++;
+        if (i % 7 == 0)
         {
-            if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
-            {
-                days += 29;
-            }
-            else
-            {
-                days += 28;
-            }
+            days = 0;
         }
-        else if (i == 4 || i == 6 || i == 9 || i == 11)
-        {
-            days += 30;
         }
-        else
-        {
-            days += 31;
-        }
-    }
 
+    switch (days)
+    {
+    case 0:
+        cout << "Monday";
+        break;
+    case 1:
+
+        cout << "Tuesday";
+        break;
+    case 2:
+        cout << "Wednesday";
+        break;
+    case 3:
+        cout << "Thursday";
+        break;
+    case 4:
+        cout << "Friday";
+        break;
+    case 5:
+        cout << "Saturday";
+        break;
+    case 6:
+        cout << "Sunday";
+        break;
+    }
     return 0;
 }
