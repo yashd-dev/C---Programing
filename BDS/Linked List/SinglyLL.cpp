@@ -34,10 +34,10 @@ void addend(node **head, int value)
     }
     tempNode->next = newnode;
 }
+
 void deletell(node **head, int val)
 {
     node *temp = *head;
-    cout << *head;
     node *prev = NULL; // Pointer to the previous node
 
     // If the head node needs to be deleted
