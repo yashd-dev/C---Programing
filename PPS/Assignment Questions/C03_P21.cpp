@@ -6,6 +6,7 @@ int main()
     int n;
     cout << "Enter Digit:";
     cin >> n;
+    n += 1;
     // Get all digits in an array
     int num_digits = 0;
     int temp = n;
@@ -13,27 +14,17 @@ int main()
     {
         num_digits++;
         temp /= 10;
-    }
-    int arr[num_digits];
-    for (int i = 0; i < num_digits; i++)
-    {
-        if (n % 10 == 0)
-        {
-            --i;
-            continue;
-        }
-        else if (i == num_digits - 1)
-        {
-            arr[i] = (n % 10) + 1;
-        }
-        else
-            arr[i] = n % 10;
-        n /= 10;
-    }
-    for (int i = 0; i < num_digits; i++)
-    {
-        cout << arr[i] << " ";
-    }
 
-    return 0;
-}
+        int arr[num_digits];
+        for (int i = 0; i < num_digits; i++)
+        {
+            arr[i] = n % 10;
+            n /= 10;
+        }
+        for (int i = num_digits - 1; i > -1; i--)
+        {
+            cout << arr[i] << " ";
+        }
+
+        return 0;
+    }
