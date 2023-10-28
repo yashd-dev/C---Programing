@@ -22,6 +22,12 @@ public:
     void enqueue(int n)
     {
         Node *newnode = new Node(n);
+        if (!newnode)
+        {
+            cout << "queue overflow";
+            exit(1);
+        }
+
         if (rear == NULL)
         {
             rear = front = newnode;
